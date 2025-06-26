@@ -14,8 +14,11 @@
         }
 
         body {
-            font-family: 'Kanit';
+            font-family: 'Kanit' sans-serif;
         }
+    </style>
+    <style>
+        @media (max-width: 700px) {}
     </style>
 </head>
 
@@ -33,7 +36,8 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">สมัครสมาชิก</a>
+                        <a class="nav-link" href="#" data-bs-toggle="modal"
+                            data-bs-target="#modalRegister">สมัครสมาชิก</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -63,7 +67,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="" class="nav-link">
+                        <a href="" class="nav-link" data-bs-toggle="modal" data-bs-target="#modalLogin">
                             เข้าสู่ระบบ
                         </a>
                     </li>
@@ -71,6 +75,7 @@
             </div>
         </div>
     </nav>
+
     <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
@@ -84,6 +89,7 @@
             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
                 aria-label="Slide 5"></button>
         </div>
+
         <div class="carousel-inner">
             <div class="carousel-item active" data-bs-interval="3000">
                 <img src="img/slide1.jpg" class="d-block w-100" alt="...">
@@ -112,74 +118,149 @@
             <span class="visually-hidden">Next</span>
         </button>
     </div>
+
     <div class="container my-3 bg-light py-3">
-        <ul class="nav">
-            <li class="nav-item mx-2">
+        <ul class="nav flex-wrap justify-content-center gap-2">
+            <li class="nav-item">
                 <a class="nav-link active btn btn-secondary" aria-current="page" href="#">หน่วยงานการศึกษา</a>
             </li>
-            <li class="nav-item mx-2">
+            <li class="nav-item">
                 <a class="nav-link active btn btn-secondary" href="#">ฝ่ายบริหารทรัพยากร</a>
             </li>
-            <li class="nav-item mx-2">
+            <li class="nav-item">
                 <a class="nav-link active btn btn-secondary" href="#">ฝ่ายวิชาการ</a>
             </li>
-            <li class="nav-item mx-2">
+            <li class="nav-item">
                 <a class="nav-link active btn btn-secondary" href="#">ฝ่ายแผนงานและความร่วมมือ</a>
             </li>
-            <li class="nav-item mx-2">
+            <li class="nav-item">
                 <a class="nav-link active btn btn-secondary" href="#">ฝ่ายพัฒนากิจการนักเรียนนักศึกษา</a>
             </li>
-            <li class="nav-item mx-2">
+            <li class="nav-item">
                 <a class="nav-link active btn btn-secondary" href="#">ITA/ข้อมูลสาธารณะ</a>
             </li>
         </ul>
     </div>
-    <div class="m-4 text-center">
-        <div class="row d-grid gap-4" style="grid-template-columns: 1fr 2fr 1fr;">
-            <div class="col bg-white rounded-1">
-                <div class="container text-center p-3">
-                    <img src="img/logo.gif" alt="logo" width="150">
-                    <h5>วิทยาลัยเทคนิคสัตหีบ</h5>
-                    <div>กม. 160 193 หมู่ 3 ต.นาจอมเทียน</div>
-                    <div>อ.สัตหีบ จ.ชลบุรี 20250</div>
-                    <div>โทรศัพท์ 038-238398, 038-283527</div>
-                    <div>โทรสาร 038-238268</div>
-                    <div>อีเมล sarabun@tatc.ac.th</div>
+
+    <div class="container-fluid">
+        <div class="row g-4">
+            <div class="col-md-3">
+                <div class="bg-white text-center p-3 mb-3">
+                    <img src="img/logo.gif" width="200" class="img-thumbnail mt-3"><br>
+                    วิทยาลัยเทคนิคสัตหีบ <br>
+                    193 หมู่ 3 ตำบลนาจอมเทียน <br>
+                    อำเภอสัตหีบ จังหวัดชลบุรี 20250 <br>
+                    โทรศัพท์ 038-238398, 038-283527<br>
+                    โทรสาร 038-238268<br>
+                    อีเมล sarabun@tatc.ac.th
                 </div>
-                <div class="container py-3">
-                    <img src="img/info1.jpg" alt="ข้อมูลพื้นฐานวิทยาลัย" width="100%">
+                <div class="bg-white p-3 mb-3 text-center">
+                    <img src="img/info1.jpg" class="img-fluid">
                 </div>
-                <div class="container py-3">
-                    <img src="img/info2.jpg" alt="แผนกวิชาที่เปิดสอน" width="100%">
+                <div class="bg-white p-3 mb-3 text-center">
+                    <img src="img/info2.jpg" class="img-fluid">
                 </div>
-                <div class="container py-3">
-                    <img src="img/info3.jpg" alt="หน่วยงานภายในวิยาลัย" width="100%">
-                </div>
-            </div>
-            <div class="col bg-white rounded-1">
-                <div class="container">
-                    <div>ประกาศจากวิทยาลัย</div>
-                    <img src="img/pic1.jpg" width="100%">
-                    <img src="img/pic6.jpg" width="100%">
-                    <img src="img/pic7.jpg" width="100%">
+                <div class="bg-white p-3 mb-3 text-center">
+                    <img src="img/info3.jpg" class="img-fluid">
                 </div>
             </div>
-            <div class="col bg-white rounded-1">
-                <div class="container">
-                    <img src="img/pic2.jpg" width="100%">
+            <div class="col-md-6">
+                <div class="bg-white p-3 h-100">
+                    ประกาศจากวิทยาลัย<br>
+                    <img src="img/pic1.jpg" class="img-fluid">
+                    <img src="img/pic6.jpg" class="img-fluid">
+                    <img src="img/pic7.jpg" class="img-fluid">
                 </div>
-                <div class="container">
-                    <img src="img/pic3.jpg" width="100%">
-                </div>
-                <div class="container">
-                    <img src="img/pic4.jpg" width="100%">
-                </div>
-                <div class="container">
-                    <img src="img/pic5.jpg" width="100%">
+            </div>
+            <div class="col-md-3">
+                <div class="bg-white p-3 h-100">
+                    <img src="img/pic2.jpg" class="img-fluid">
+                    <img src="img/pic3.jpg" class="img-fluid">
+                    <img src="img/pic4.jpg" class="img-fluid">
+                    <img src="img/pic5.jpg" class="img-fluid">
                 </div>
             </div>
         </div>
     </div>
+
+    <div class="modal fade" id="modalLogin" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-center">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">เข้าสู่ระบบ</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <form>
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp">
+                                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1">
+                            </div>
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalRegister" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-center">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">สมัครสมาชิก</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <form>
+                            <div class="mb-3">
+                                <label for="exampleInputUsername1" class="form-label">Username</label>
+                                <input type="password" class="form-control" id="exampleInputUsername1">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputPassword" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="exampleInputPassword">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputEmail" class="form-label">Email address</label>
+                                <input type="email" class="form-control" id="exampleInputEmail">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputPhone" class="form-label">เบอร์โทรศัพท์</label>
+                                <input type="text" class="form-control" id="exampleInputPhone">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputName" class="form-label">ชื่อ-นามสกุล</label>
+                                <input type="text" class="form-control" id="exampleInputName">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputAddress" class="form-label">ที่อยู่</label>
+                                <input type="text" class="form-control" id="exampleInputAddress">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-black text-white text-center">วิทยาลัยเทคนิคสัตหีบ<br>นายณัฐพล พันธุ สท.4/1 009</footer>
 
     <script src="bootstrap-5.3.7-dist/js/bootstrap.bundle.js"></script>
 </body>
